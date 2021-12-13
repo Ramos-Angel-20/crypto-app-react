@@ -1,0 +1,72 @@
+.CryptoCurrencyItem {
+    height: 26rem;
+    min-width: 20rem;
+    padding: 1rem;
+    background-color: var(--container-background-color);
+    border-radius: 10px;
+    box-shadow: 1px 1px 5px rgba(0,0,0,0.5);
+    overflow: hidden;
+}
+.CryptoCurrencyItem-img {
+    width: 12rem;
+    height: 12rem;
+    margin: 0 auto;
+}
+.CryptoCurrencyItem-img img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: contain;
+}
+.CryptoCurrencyItem__info {
+    height: 7rem;
+    margin: 1rem 0;
+    
+}
+.CryptoCurrencyItem__info p:nth-child(1){
+    font-size: 1.6rem;
+    font-family: var(--title-font-family);
+    font-weight: 600;
+}
+
+.CryptoCurrencyItem__info p:nth-child(1) span,
+.CryptoCurrencyItem__info p:nth-child(2) {
+    font-family: var(--body-font-family);
+    font-size: 1.4rem;
+    font-weight: 400;
+}
+
+@media screen and (min-width: 768px) {
+    .CryptoCurrencyItem__info p:nth-child(1) {
+        font-size: 1.8rem;
+    }
+
+    .CryptoCurrencyItem__info p:nth-child(1) span,
+    .CryptoCurrencyItem__info p:nth-child(2) {
+        font-size: 1.6rem;
+    }
+}
+.CryptoCurrencyItem__actions {
+    width: 100%;
+    text-align: center;
+}
+.CryptoCurrencyItem__actions button {
+    color: #fff;
+    outline: none;
+    background-color: var(--primary-color);
+    border: none;
+    padding: .5rem 1rem;
+    border-radius: 50px;
+    font-weight: 600;
+
+    &:focus, &:hover {
+        background-color: lighten($color: #2C73D2, $amount: 10);
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .CryptoCurrencyItem__actions button {
+        font-size: 1.7rem;
+    }
+}
+

@@ -1,0 +1,88 @@
+.CryptoCurrencyModal {
+    background-color: var(--container-background-color);
+    width: 90%;
+    max-width: 90rem;
+    height: 40rem;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    position: absolute;
+    top: 10rem;
+    border-radius: 1rem;
+    box-shadow: 1px 1px 8px rgba(0,0,0,0.7);
+    animation: CryptoCurrencyModal__open 500ms ease-in-out forwards;
+
+    .CryptoCurrencyModal__icon {
+       padding: 1rem;
+       height: 15rem;
+
+       & img {
+           max-height: 100%;
+           object-fit: contain;
+       }
+    }
+
+    .CryptoCurrencyModal__info {
+        padding: 1rem;
+        height: 100%;
+        max-height: 18rem;
+
+        .CryptoCurrencyModal__info-name {
+            text-align: center;
+            font-family: var(--title-font-family);
+            font-size: 2rem;
+            font-weight: 600;
+        }
+
+        .CryptoCurrencyModal__info-fields {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            font-family: var(--body-font-family);
+            gap: 1rem;
+            font-size: 1.5rem;
+            min-height: 12rem;
+
+            & span {
+                font-family: var(--title-font-family);
+                font-weight: 600;
+            }
+        }
+    }
+
+    .CryptoCurrencyModal__closeButton {
+        display: flex;
+        justify-content: flex-end;
+        padding: .5rem;
+        
+        &:first-child {
+            color: red;
+            font-size: 3rem;
+
+            &:hover, &:focus {
+                color: darken($color: red, $amount: 15);
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .CryptoCurrencyModal {
+        top: 20rem;
+        width: 50%;
+    }
+}
+
+@keyframes CryptoCurrencyModal__open {
+    
+    from {
+
+        transform: translatey(-100vh);
+        opacity: 0;
+
+    } to {
+
+        transform: translatey(0);
+        opacity: 1;
+
+    }
+}

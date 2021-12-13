@@ -1,0 +1,76 @@
+.CryptoCurrencies {
+    margin-top: 1rem;
+}
+
+.CryptoCurrencies__header {
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.CryptoCurrencies__header h2 {
+    font-family: var(--title-font-family);
+    font-size: 2rem;    
+}
+
+@media screen and (min-width: 768px) {
+    .CryptoCurrencies__header h2 {
+        font-size: 2.5rem;
+    }
+}
+
+.CryptoCurrencies__header-searchBar {
+    background-color: var(--container-background-color);
+    padding: .5rem;
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    border-radius: .5rem;
+    // max-width: 20.6rem;
+}
+.CryptoCurrencies__header-searchBar input {
+    font-size: 1.4rem;
+    background-color: var(--container-background-color);
+    border: none;
+    width: auto;
+    outline: none;
+    height: 100%;
+    margin-left: .5rem;
+    color: var(--font-color);
+}
+.CryptoCurrencies__header-searchBar__icon {
+    margin: 0;
+    color: #8a8a8a;
+}
+
+@media screen and (min-width: 768px) {
+    .CryptoCurrencies__header-searchBar {
+        width: 100%;
+        margin-left: 2rem;
+
+        & input {
+            width: 100%;
+            font-size: 1.8rem;
+            padding: .5rem 0;
+        }
+    }
+}
+
+.CryptoCurrencies-list {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    overflow-x: auto;
+    gap: 1rem;
+    padding: 1rem;
+    min-height: 28rem;
+}
+
+@media screen and (min-width: 768px) {
+    .CryptoCurrencies-list {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+    }
+}

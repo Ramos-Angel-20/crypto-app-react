@@ -1,0 +1,13 @@
+/* Configuraciones */
+@import './base/settings';
+
+/* Componentes */
+@import './components/Navbar';
+@import './components/CryptoCurrencies';
+@import './components/CryptoCurrencyItem';
+@import './components/Backdrop';
+@import './components/CryptoCurrenciesModal';
+@import './components/CryptoNews';
+@import './components/CryptoNewsItems';
+@import './components/SkeletonCryptoCurrencyItem';
+@import './components/SkeletonCryptoNewsItem';

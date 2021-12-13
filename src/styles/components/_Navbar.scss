@@ -1,0 +1,78 @@
+    .Navbar {
+        background-color: var(--primary-color);
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        font-size: 1.5rem;
+        color: white;
+        font-family: var(--title-font-family);
+        margin: 0;
+        justify-content: space-between;
+    }
+
+    @media screen and (min-width: 768px) {
+        .Navbar {
+            font-size: 1.8rem;
+            padding: 1rem 0;
+        }
+    }
+
+    .Navbar__brand {
+        display: flex;
+        align-items: center;
+        width: auto;
+        user-select: none;
+
+        & span {
+            font-size: 3.5rem;
+            margin: 0 .5rem;
+            color: yellow;
+        }
+    }
+    .Navbar__themeIcons {
+        font-size: 2rem;
+        line-height: 2rem;
+        margin: 0 2rem;
+        cursor: pointer;    
+    }
+
+    @media screen and (min-width: 768px) {
+        .Navbar__themeIcons {
+            font-size: 2.5rem;
+        }
+    }
+
+    .header__backgroundImage {
+        position: relative;
+        & img {
+            object-fit: cover;
+            height: 10rem;
+        }
+    }
+
+    @media screen and (min-width: 768px) {
+        .header__backgroundImage {
+            & img {
+                height: 20rem;
+            }
+        }
+    }
+
+    .header__backgroundImage-overlay {
+        position: absolute;
+        background-color: rgba(0,0,0,0.5);
+        height: 100%;
+        width: 100%;
+        top: 0;
+    }
+
+    /* ======================= Media-Queries ======================= */
+    /* 
+        TODO:
+        480px.
+        600px.
+        768px.
+        900px.
+        1024px.
+        1200px.
+    */

@@ -1,0 +1,104 @@
+.CryptoNewsItem__info {
+    // z-index: 200;
+    position: absolute;
+    height: 100%;
+    top: 0;
+    transform: translateY(100%);
+    transition: all 300ms ease-out;
+    opacity: 0;
+    background-color: var(--container-background-color);
+    padding: 1rem;
+    font-size: 1.3rem;
+    font-family: var(--body-font-family);
+    text-align: justify;
+    overflow-y: auto;
+
+    .CryptoNewsItem__info-link-icon {
+        color: var(--font-color);
+        
+    }
+
+    & p {
+        min-height: 90%;
+    }
+
+    & a {
+        text-decoration: none;
+        color: var(--font-color);
+        
+        bottom: 2rem;
+        font-size: 1.3rem;
+        text-align: center;
+        border-bottom: 2px solid transparent;
+        transition: border-bottom 150ms ease-in-out;
+
+        &:hover, &:focus {
+            border-bottom: 2px solid var(--font-color);
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .CryptoNewsItem__info {
+        font-size: 1.8rem;
+
+        & a {
+            font-size: 1.6rem;
+        }
+    }
+}
+
+
+.CryptoNewsItem {
+    height: 26rem;
+    min-width: 20rem;
+    // padding: 1rem;
+    background-color: var(--container-background-color);
+    border-radius: 10px;
+    box-shadow: 1px 1px 5px rgba(0,0,0,0.5);
+    overflow: hidden;
+    position: relative;
+
+    &:hover .CryptoNewsItem__info, &:focus .CryptoNewsItem__info {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .CryptoNewsItem {
+        height: 35rem;
+    }
+}
+
+
+.CryptoNewsItem__image {
+    width: 100%;
+    height: 100%;
+
+    position: relative;
+
+    & img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    & p {
+        position: absolute;
+        padding: 1rem;
+        color: #fff;
+        font-family: var(--title-font-family);
+        font-size: 1.6rem;
+        font-weight: 600;
+        text-shadow: 1px 1px 12px rgba(0,0,0,0.9);
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .CryptoNewsItem__image {
+        & p {
+            font-size: 2rem;
+        }
+    }
+}

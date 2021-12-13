@@ -1,0 +1,68 @@
+/*
+    Medidas estandar mobile first:
+    480px.
+    600px.
+    768px.
+    900px.
+    1024px.
+    1200px.
+
+
+    Empezamos en 360px (Moto G4)
+*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    display: block;
+    width: 100%;
+}
+
+:root {
+    --background-color: #cecece;
+    --font-color: black;
+    --container-background-color: #fff;
+    --title-font-family: 'Poppins', sans-serif;
+    --body-font-family: 'Rubik', sans-serif;
+    --primary-color: #2C73D2;
+    --background-font-color: white;
+
+    //Skeleton
+    --skeleton-container-font-color: #e6e6e6;
+}
+
+html {
+    font-size: 62.5%;  /* 1rem = 10px */
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    background-color: var(--background-color);
+    color: var(--font-color);
+    transition: all 0.3s ease;
+}
+
+/* Configuración para dark theme */
+body.dark {
+    --background-color: #151515;
+    --font-color: #fff;
+    --container-background-color: #323232;
+
+    //Skeleton
+    --skeleton-container-font-color: #474747;
+}
+
+/* clase reutilizable */
+/* TODO: Hacer responsive*/
+.container {
+    width: 98%;
+    // max-width: 35rem;
+    margin: 0 auto;
+    // background-color: red;
+}
+
+/* TODO: Media-queries para tener font-size responsivo */

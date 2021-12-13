@@ -1,0 +1,45 @@
+.CryptoNews {
+    margin-top: 1rem;
+
+    .CryptoNews__header {
+        padding: 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        & h2 {
+            font-family: var(--title-font-family);
+            font-size: 2rem;
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .CryptoNews {
+        .CryptoNews__header  {
+            & h2 {
+                font-size: 2.5rem;
+            }
+        }
+    }
+}
+
+.CryptoNews-list {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    overflow-x: auto;
+    gap: 1rem;
+    padding: 1rem;
+    min-height: 28rem;
+    margin-bottom: 1rem;
+}
+
+@media screen and (min-width: 768px) {
+    .CryptoNews-list {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+        
+    }
+}
