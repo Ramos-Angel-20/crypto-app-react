@@ -48,8 +48,8 @@ const useCryptoCurrencies = () => {
     const filteredCoins: ICoin[] = state.currenciesList;
 
 
-    const [selectedCoinSlug, setSelectedCoinSlug] = useState<string>('');
-    const selectedCoin: ICoin = state.currenciesList?.find(coin => coin.slug === selectedCoinSlug)!;
+    // const [selectedCoinSlug, setSelectedCoinSlug] = useState<string>('');
+    // const selectedCoin: ICoin = state.currenciesList?.find(coin => coin.slug === selectedCoinSlug)!;
 
 
     const searchTermChangeHandler = (e: ChangeEvent<HTMLInputElement>) => {
@@ -59,7 +59,7 @@ const useCryptoCurrencies = () => {
 
 
     const resetSelectedCoin = () => {
-        setSelectedCoinSlug('');
+        // setSelectedCoinSlug('');
     }
 
     const getCurrencies = useCallback(() => {
@@ -90,10 +90,8 @@ const useCryptoCurrencies = () => {
         isLoading: state.isLoading,
         error: state.error,
         filteredCoins,
-        selectedCoin,
         getCurrencies,
         searchTermChangeHandler,
-        setSelectedCoinSlug,
         resetSelectedCoin
     };
 

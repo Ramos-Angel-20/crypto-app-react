@@ -10,7 +10,7 @@ import SkeletonCryptoCurrencyItem from './SkeletonCryptoCurrencyItem';
 
 const CryptoCurrencies = () => {
 
-    const { filteredCoins, isLoading, error, selectedCoin, getCurrencies, searchTermChangeHandler, setSelectedCoinSlug, resetSelectedCoin } = useCryptoCurrencies();
+    const { filteredCoins, isLoading, error, getCurrencies, searchTermChangeHandler, resetSelectedCoin } = useCryptoCurrencies();
     const searchBarRef = useRef<any>();
 
     const skeletonArray = [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15];
@@ -25,20 +25,12 @@ const CryptoCurrencies = () => {
     }
 
     const fetchSelectedCoin = (slug: string) => {
-        setSelectedCoinSlug(slug);
+        // setSelectedCoinSlug(slug);
     }
 
 
     return (
         <>
-            {
-                selectedCoin &&
-                (
-                    <Backdrop onClose={resetSelectedCoin}>
-                        <CryptoCurrencyModal coin={selectedCoin} onClose={resetSelectedCoin} />
-                    </Backdrop>
-                )
-            }
             <div className='container CryptoCurrencies'>
 
                 <div className="CryptoCurrencies__header">
