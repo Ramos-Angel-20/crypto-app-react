@@ -43,7 +43,7 @@ export const getCryptoCurrencies = async (): Promise<ICoin[] | any> => {
             url: 'https://coinranking1.p.rapidapi.com/coins',
             headers: {
                 'x-rapidapi-host': 'coinranking1.p.rapidapi.com',
-                'x-rapidapi-key': process.env.REACT_APP_X_RAPIDAPI_KEY
+                'x-rapidapi-key': '6b77fed7ffmsh995b9b5c6e581abp11dd20jsne8c48575296c'
             }
         };
 
@@ -54,6 +54,7 @@ export const getCryptoCurrencies = async (): Promise<ICoin[] | any> => {
         }
 
         const result: ICoin[] = response.data.data.coins;
+        console.log(result);
         return result;
 
     } catch (err) {
