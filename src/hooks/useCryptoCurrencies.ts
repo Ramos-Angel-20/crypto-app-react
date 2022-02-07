@@ -44,7 +44,8 @@ const useCryptoCurrencies = () => {
 
 
     const [searchTerm, setSearchTerm] = useState<string>('');
-    const filteredCoins: ICoin[] = state.currenciesList?.filter(coin => coin.name.includes(searchTerm) || coin.slug.includes(searchTerm))!;
+    // const filteredCoins: ICoin[] = state.currenciesList?.filter(coin => coin.name.includes(searchTerm) || coin.slug.includes(searchTerm))!;
+    const filteredCoins: ICoin[] = state.currenciesList;
 
 
     const [selectedCoinSlug, setSelectedCoinSlug] = useState<string>('');

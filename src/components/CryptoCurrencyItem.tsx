@@ -18,9 +18,9 @@ const CryptoCurrencyItem = ({ coin, onClick } : CryptoCurrencyItemPropTypes) => 
                 <p>Price: $ {parseFloat(coin.price).toFixed(2)}</p>
             </div>
             
-            <div className="CryptoCurrencyItem__actions">
+            {/* <div className="CryptoCurrencyItem__actions">
                 <button onClick={() => onClick(coin.slug)}>View Details</button>
-            </div>
+            </div> */}
         </div>
     )
 }

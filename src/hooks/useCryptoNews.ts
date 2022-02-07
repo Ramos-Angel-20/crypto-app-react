@@ -46,11 +46,15 @@ const useCryptoNews = () => {
 
         getCryptoNews(freshness).then((result) => {
 
-            dispatch({ type: 'SUCCESS', payload: { loading: false, newsList: result } });
-
+            if (result) {
+                dispatch({ type: 'SUCCESS', payload: { loading: false, newsList: result } });
+            } else {
+                dispatch({type: 'ERROR', payload: {loading: false, error: 'something went wrong'}});    
+            }
+            
         }).catch(err => {
 
-            dispatch({type: 'ERROR', payload: {loading: false, error: err}})
+            dispatch({type: 'ERROR', payload: {loading: false, error: err}});
 
         });
     }, []);

@@ -43,7 +43,7 @@ const CryptoCurrencies = () => {
 
                 <div className="CryptoCurrencies__header">
                     <h2>Currencies</h2>
-                    <div className='CryptoCurrencies__header-searchBar'>
+                    {/* <div className='CryptoCurrencies__header-searchBar'>
                         <BiSearchAlt onClick={searchIconClickHandler} className='CryptoCurrencies__header-searchBar__icon' />
                         <input
                             type='text'
@@ -52,7 +52,7 @@ const CryptoCurrencies = () => {
                             ref={searchBarRef}
                             disabled={isLoading}
                         />
-                    </div>
+                    </div> */}
                 </div>
 
 

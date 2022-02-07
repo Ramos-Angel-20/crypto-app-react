@@ -7,7 +7,7 @@ import SkeletonCryptoNewsItem from './SkeletonCryptoNewsItem';
 
 const CryptoNews = () => {
 
-    const freshness: Freshness = 'Day'; //TODO: Verificar que esto funcione.
+    const freshness: Freshness = 'Day';
     
     const { newsList, isLoading, error, getNews } = useCryptoNews();
 
