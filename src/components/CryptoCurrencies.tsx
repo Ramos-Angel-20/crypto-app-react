@@ -49,12 +49,8 @@ const CryptoCurrencies = () => {
 
 
                 <div className="CryptoCurrencies-list">
-                    {
-                        isLoading ? 
-                        skeletonArray.map(item => <SkeletonCryptoCurrencyItem key={item}/>) 
-                        : 
-                        filteredCoins?.map(item => <CryptoCurrencyItem key={item.uuid} coin={item} onClick={fetchSelectedCoin} />)!
-                    }
+                    {isLoading && skeletonArray.map(item => <SkeletonCryptoCurrencyItem key={item}/>)}
+                    {isLoading || filteredCoins?.map(item => <CryptoCurrencyItem key={item.uuid} coin={item} onClick={fetchSelectedCoin} />)!}
                     {error && <p>{error}</p>}
                 </div>
 
