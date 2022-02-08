@@ -53,7 +53,7 @@ const CryptoCurrencies = () => {
                         isLoading ? 
                         skeletonArray.map(item => <SkeletonCryptoCurrencyItem key={item}/>) 
                         : 
-                        filteredCoins?.map(item => <CryptoCurrencyItem key={item.uuid} coin={item} onClick={fetchSelectedCoin} />)
+                        filteredCoins?.map(item => <CryptoCurrencyItem key={item.uuid} coin={item} onClick={fetchSelectedCoin} />)!
                     }
                     {error && <p>{error}</p>}
                 </div>

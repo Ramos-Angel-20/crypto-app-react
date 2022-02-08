@@ -43,7 +43,7 @@ const useCryptoCurrencies = () => {
     const [state, dispatch] = useReducer(currenciesReducer, cryptoCurrenciesInitialState);
 
 
-    const [searchTerm, setSearchTerm] = useState<string>('');
+    // const [searchTerm, setSearchTerm] = useState<string>('');
     // const filteredCoins: ICoin[] = state.currenciesList?.filter(coin => coin.name.includes(searchTerm) || coin.slug.includes(searchTerm))!;
     const filteredCoins: ICoin[] = state.currenciesList;
 
@@ -54,7 +54,6 @@ const useCryptoCurrencies = () => {
 
     const searchTermChangeHandler = (e: ChangeEvent<HTMLInputElement>) => {
         const term = e.target.value.trim().toLowerCase().replaceAll(' ', '');
-        setSearchTerm(term);
     }
 
 
